@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span>Client</span> {{vm.client.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.client.name}}</span>
+        </dd>
+        <dt><span>Topic</span></dt>
+        <dd>
+            <span>{{vm.client.topic}}</span>
+        </dd>
+        <dt><span translate="holmesaggregatorApp.client.read_offset">Read Offset</span></dt>
+        <dd>
+            <span>{{vm.client.read_offset}}</span>
+        </dd>
+        <dt><span translate="holmesaggregatorApp.client.page_size">Page Size</span></dt>
+        <dd>
+            <span>{{vm.client.page_size}}</span>
+        </dd>
+        <dt><span>Uri</span></dt>
+        <dd>
+            <span>{{vm.client.uri}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="client-detail.edit({id:vm.client.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

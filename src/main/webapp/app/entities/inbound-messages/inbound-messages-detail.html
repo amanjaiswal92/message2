@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Inbound Messages</span> {{vm.inboundMessages.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Message Id</span></dt>
+        <dd>
+            <span>{{vm.inboundMessages.messageId}}</span>
+        </dd>
+        <dt><span>Group Id</span></dt>
+        <dd>
+            <span>{{vm.inboundMessages.groupId}}</span>
+        </dd>
+        <dt><span translate="holmesaggregatorApp.inboundMessages.created_at">Created At</span></dt>
+        <dd>
+            <span>{{vm.inboundMessages.created_at | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Payload</span></dt>
+        <dd>
+            <span>{{vm.inboundMessages.payload}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="inbound-messages-detail.edit({id:vm.inboundMessages.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

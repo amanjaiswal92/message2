@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "topic",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "read_offset",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "page_size",
+            "fieldType": "Integer"
+        },
+        {   "fieldName": "uri",
+             "fieldType": "String"
+        }
+
+    ],
+    "changelogDate": "20160915190932",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "client",
+    "pagination": "no"
+}

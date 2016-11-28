@@ -1,0 +1,62 @@
+<div>
+    <h2>Outbound Messages</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="outbound-messages.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Outbound Messages
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Message Id</span></th>
+                    <th><span>Group Id</span></th>
+                    <th><span>Created At</span></th>
+                    <th><span>Payload</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="outboundMessages in vm.outboundMessages track by outboundMessages.id">
+                    <td><a ui-sref="outbound-messages-detail({id:outboundMessages.id})">{{outboundMessages.id}}</a></td>
+                    <td>{{outboundMessages.messageId}}</td>
+                    <td>{{outboundMessages.groupId}}</td>
+                    <td>{{outboundMessages.createdAt | date:'medium'}}</td>
+                    <td>{{outboundMessages.payload}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="outbound-messages-detail({id:outboundMessages.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="outbound-messages.edit({id:outboundMessages.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="outbound-messages.delete({id:outboundMessages.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

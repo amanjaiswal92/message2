@@ -1,0 +1,56 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myClientLabel">Create or edit a Client</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.client.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.client.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.client.name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_topic">Topic</label>
+            <input type="text" class="form-control" name="topic" id="field_topic"
+                    ng-model="vm.client.topic"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="holmesaggregatorApp.client.read_offset" for="field_read_offset">Read Offset</label>
+            <input type="number" class="form-control" name="read_offset" id="field_read_offset"
+                    ng-model="vm.client.read_offset"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="holmesaggregatorApp.client.page_size" for="field_page_size">Page Size</label>
+            <input type="number" class="form-control" name="page_size" id="field_page_size"
+                    ng-model="vm.client.page_size"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_uri">Uri</label>
+            <input type="text" class="form-control" name="uri" id="field_uri"
+                    ng-model="vm.client.uri"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

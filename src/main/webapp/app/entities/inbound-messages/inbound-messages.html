@@ -1,0 +1,62 @@
+<div>
+    <h2>Inbound Messages</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="inbound-messages.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Inbound Messages
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Message Id</span></th>
+                    <th><span>Group Id</span></th>
+                    <th><span translate="holmesaggregatorApp.inboundMessages.created_at">Created At</span></th>
+                    <th><span>Payload</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="inboundMessages in vm.inboundMessages track by inboundMessages.id">
+                    <td><a ui-sref="inbound-messages-detail({id:inboundMessages.id})">{{inboundMessages.id}}</a></td>
+                    <td>{{inboundMessages.messageId}}</td>
+                    <td>{{inboundMessages.groupId}}</td>
+                        <td>{{inboundMessages.created_at | date:'mediumDate'}}</td>
+                    <td>{{inboundMessages.payload}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="inbound-messages-detail({id:inboundMessages.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="inbound-messages.edit({id:inboundMessages.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="inbound-messages.delete({id:inboundMessages.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "messageId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "groupId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "created_at",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "payload",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161009135311",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "inbound_messages",
+    "pagination": "no"
+}

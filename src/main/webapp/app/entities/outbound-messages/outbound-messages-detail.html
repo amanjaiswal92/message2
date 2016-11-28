@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Outbound Messages</span> {{vm.outboundMessages.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Message Id</span></dt>
+        <dd>
+            <span>{{vm.outboundMessages.messageId}}</span>
+        </dd>
+        <dt><span>Group Id</span></dt>
+        <dd>
+            <span>{{vm.outboundMessages.groupId}}</span>
+        </dd>
+        <dt><span>Created At</span></dt>
+        <dd>
+            <span>{{vm.outboundMessages.createdAt | date:'medium'}}</span>
+        </dd>
+        <dt><span>Payload</span></dt>
+        <dd>
+            <span>{{vm.outboundMessages.payload}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="outbound-messages-detail.edit({id:vm.outboundMessages.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

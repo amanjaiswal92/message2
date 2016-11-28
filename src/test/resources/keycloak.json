@@ -1,0 +1,8 @@
+{
+  "realm": "AILSecureQA",
+  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtYKM8pggX1H7+OeS6hN9l+e2H5k2FQCgdiQXvXiMBwDYOWty2Sz2x6q8MviX5seN7K/r/HdSYjdWbFkZ5KarVUhO/VsQRBcxD102K5sb/xe1fBNLxHC0HRC5GQ1RLF2BCLhHQX++Ezf6poyfHVYR1DXdkDN+dAsJBgXhVdhxneSD/W654y7eceMsahZcPXPn8yxujXwDkG8+EXwaquP138rPyfz+LVzb1Ua5ulm1cjxmRMAYcaxZLm09Xm3L74aSOQv5k7NX3AzGCaf5eu/uw7qLrKAoSZBL7NLmxmRNMM7oQZNr+kwLR2W2UpP+aT3tOsphxBDKaMwTMlWAaBzKlQIDAQAB",
+  "bearer-only": true,
+  "auth-server-url": "https://keycloak-qa.ailiens.com/auth",
+  "ssl-required": "none",
+  "resource": "mycroft"
+}
